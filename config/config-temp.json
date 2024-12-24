@@ -101,10 +101,8 @@
     {"tag": "🇪🇺 欧洲自动", "type": "urltest", "outbounds": ["{all}"],  "filter": [{ "action": "include", "keywords": ["🇫🇷|🇮🇹|🇳🇱|🇪🇸|🇨🇭|🇬🇧|法国|意大利|西班牙|瑞士|英国|荷兰|德国"] }] ,"url": "http://www.gstatic.com/generate_204", "interval": "5m", "tolerance": 50},
     {"tag": "🎥 Netflix", "type": "urltest", "outbounds": ["{all}"], "filter": [{ "action": "include", "keywords": ["🇺🇸|US|us|美国|美|United States"] }] ,"url": "http://www.gstatic.com/generate_204", "interval": "5m", "tolerance": 50},
     {"tag": "📲 Telegram", "type": "urltest", "outbounds": ["{all}"], "filter": [{ "action": "include", "keywords": ["🇺🇸|US|us|美国|美|United States|🇨🇦|加拿大"] } ],"url": "http://www.gstatic.com/generate_204", "interval": "5m", "tolerance": 50},
-
-    { "type": "direct","tag": "🎯 全球直连"},
-    { "type": "block","tag": "block"},
-    { "type": "dns","tag": "dns-out"}
+    {"tag": "🎯 全球直连", "type": "direct" },
+    {"tag": "dns-out", "type": "dns" }
       ],
   
   "route": {
