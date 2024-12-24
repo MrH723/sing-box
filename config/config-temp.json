@@ -86,8 +86,8 @@
     ],
   
   "outbounds": [
-    {"tag": "♻️ 自动选择", "type": "urltest", "outbounds": ["{all}"], "excludes": "网站|地址|剩余|过期|时间|有效","url": "http://www.gstatic.com/generate_204", "interval": "5m", "tolerance": 50},
-    {"tag": "🤏 手动切换", "type": "selector", "outbounds": ["{all}"], "excludes": "网站|地址|剩余|过期|时间|有效"},
+    {"tag": "♻️ 自动选择", "type": "urltest", "outbounds": ["{all}"], "url": "http://www.gstatic.com/generate_204", "interval": "5m", "tolerance": 50},
+    {"tag": "🤏 手动切换", "type": "selector", "outbounds": ["{all}"]},
     {"tag": "🇭🇰 香港自动", "type": "urltest", "outbounds": ["{all}"], "includes": ["🇭🇰|香港|HK|HONGKONG|HongKong"],"url": "http://www.gstatic.com/generate_204", "interval": "5m", "tolerance": 50 },
     {"tag": "🐸 台湾自动", "type": "urltest", "outbounds": ["{all}"], "includes": ["🇨🇳|台湾|TW|TAIWAN|Taiwan"],"url": "http://www.gstatic.com/generate_204", "interval": "5m", "tolerance": 50},
     {"tag": "🇯🇵 日本自动", "type": "urltest", "outbounds": ["{all}"],  "filter": [{ "action": "include", "keywords": ["🇯🇵|日本|JP|JAPAN|Japan"] }],"url": "http://www.gstatic.com/generate_204", "interval": "5m", "tolerance": 50 },
