@@ -29,7 +29,7 @@
       },
       "independent_cache": true,
       "rules": [
-          { "rule_set": ["AdGuardSDNSFilter","AdGuardSDNSFilter-2","AdGuardSDNSFilter-3","chrome-doh"],"server": "adguadDNS","disable_cache": true},
+          { "rule_set": ["AdGuardSDNSFilter","AdGuardSDNSFilter-2","AdGuardSDNSFilter-3","chrome-doh"],"action": "reject","method": "default","no_drop": false},
           { "rule_set": ["geosite-cn","geoip-cn"],"server": "ALIDNS","disable_cache": true},
           { "outbound": ["any"],"server": "adguadDNS"},
           { "query_type": ["A","AAAA"],"rewrite_ttl": 1,"server": "fakeip"},
