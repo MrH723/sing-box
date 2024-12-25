@@ -88,21 +88,22 @@
   "outbounds": [
     {"tag": "♻️ 自动选择", "type": "urltest", "outbounds": ["{all}"], "filter": [{ "action": "exclude", "keywords": ["网站|地址|剩余|过期|时间|有效|套餐|超时|官网|节点异常|官 网"] }],"url": "http://www.gstatic.com/generate_204", "interval": "5m", "tolerance": 50},
     {"tag": "🤏 手动切换", "type": "selector", "outbounds": ["{all}"], "filter": [{ "action": "exclude", "keywords": ["网站|地址|剩余|过期|时间|有效|套餐|超时|官网|节点异常|官 网"] }] },
-    {"tag": "🇭🇰 港澳自动", "type": "urltest", "outbounds": ["{all}"], "filter": [{ "action": "include", "keywords": ["🇭🇰|香港|HK|HONGKONG|HongKong|🇲🇴|澳门"] }],"url": "http://www.gstatic.com/generate_204", "interval": "5m", "tolerance": 50 },
+    {"tag": "🇭🇰 港澳自动", "type": "urltest", "outbounds": ["{all}"], "filter": [{ "action": "include", "keywords": ["🇭🇰|香港|HK|HONGKONG|HongKong|🇲🇴|澳门|HK"] }],"url": "http://www.gstatic.com/generate_204", "interval": "5m", "tolerance": 50 },
     {"tag": "🐸 台湾自动", "type": "urltest", "outbounds": ["{all}"], "filter": [{ "action": "include", "keywords": ["🇨🇳|台湾|TW|TAIWAN|Taiwan"] }], "url": "http://www.gstatic.com/generate_204", "interval": "5m", "tolerance": 50},
     {"tag": "🇯🇵 日本自动", "type": "urltest", "outbounds": ["{all}"],  "filter": [{ "action": "include", "keywords": ["🇯🇵|日本|JP|JAPAN|Japan"] }],"url": "http://www.gstatic.com/generate_204", "interval": "5m", "tolerance": 50 },
     {"tag": "🇸🇬 新加坡自动", "type": "urltest", "outbounds": ["{all}"], "filter": [{ "action": "include", "keywords": ["🇸🇬|新加坡|SG|SINGAPORE|Singapore"] }],"url": "http://www.gstatic.com/generate_204", "interval": "5m", "tolerance": 50 },
     {"tag": "🇺🇸 美国自动", "type": "urltest", "outbounds": ["{all}"], "filter": [{ "action": "include", "keywords": ["🇺🇸|US|us|美国|美|United States"] }] ,"url": "http://www.gstatic.com/generate_204", "interval": "5m", "tolerance": 50},
-    {"tag": "🌏️ 亚洲其他", "type": "urltest", "outbounds": ["{all}"], "filter": [{ "action": "include", "keywords": ["🇰🇷|🇮🇳|us|韩国|印度|🇻🇳|越南|泰国|🇹🇭|🇵🇭|菲律宾"] }] ,"url": "http://www.gstatic.com/generate_204", "interval": "5m", "tolerance": 50},
+    {"tag": "🌏️ 亚洲其他", "type": "urltest", "outbounds": ["{all}"], "filter": [{ "action": "include", "keywords": ["🇰🇷|🇮🇳|us|韩国|印度|🇻🇳|越南|泰国|🇹🇭|🇵🇭|菲律宾|🇲🇾|马来西亚|印度尼西亚|🇮🇩"] }] ,"url": "http://www.gstatic.com/generate_204", "interval": "5m", "tolerance": 50},
     {"tag": "🌏️ 非洲自动", "type": "urltest", "outbounds": ["{all}"], "filter": [{ "action": "include", "keywords": ["🇿🇦|南非|🇳🇬|尼日利亚"] }] ,"url": "http://www.gstatic.com/generate_204", "interval": "5m", "tolerance": 50},
-    {"tag": "🌏️ 大洋洲自动", "type": "urltest", "outbounds": ["{all}"], "filter": [{ "action": "include", "keywords": ["🇦🇺|澳大利亚"] }] ,"url": "http://www.gstatic.com/generate_204", "interval": "5m", "tolerance": 50},
+    {"tag": "🌏️ 大洋洲自动", "type": "urltest", "outbounds": ["{all}"], "filter": [{ "action": "include", "keywords": ["🇦🇺|澳大利亚|新西兰|🇳🇿"] }] ,"url": "http://www.gstatic.com/generate_204", "interval": "5m", "tolerance": 50},
     {"tag": "🇸🇦 中东自动", "type": "urltest", "outbounds": ["{all}"], "filter": [{ "action": "include", "keywords": ["🇮🇱|以色列|🇸🇦|沙特阿拉伯|🇦🇪|阿联酋"] }] ,"url": "http://www.gstatic.com/generate_204", "interval": "5m", "tolerance": 50},
     {"tag": "🌏️ 南美自动", "type": "urltest", "outbounds": ["{all}"], "filter": [{ "action": "include", "keywords": ["🇲🇽|墨西哥|🇧🇷|巴西|🇨🇱|智利|🇨🇴|哥伦比亚"] }] ,"url": "http://www.gstatic.com/generate_204", "interval": "5m", "tolerance": 50},
-    {"tag": "🇪🇺 欧洲自动", "type": "urltest", "outbounds": ["{all}"],  "filter": [{ "action": "include", "keywords": ["🇫🇷|🇮🇹|🇳🇱|🇪🇸|🇨🇭|🇬🇧|法国|意大利|西班牙|瑞士|英国|荷兰|德国"] }] ,"url": "http://www.gstatic.com/generate_204", "interval": "5m", "tolerance": 50},
+    {"tag": "🇪🇺 欧洲自动", "type": "urltest", "outbounds": ["{all}"],  "filter": [{ "action": "include", "keywords": ["🇫🇷|🇮🇹|🇳🇱|🇪🇸|🇨🇭|🇬🇧|法国|意大利|西班牙|瑞士|英国|荷兰|德国|DE|GB"] }] ,"url": "http://www.gstatic.com/generate_204", "interval": "5m", "tolerance": 50},
     {"tag": "🎥 Netflix", "type": "urltest", "outbounds": ["{all}"], "filter": [{ "action": "include", "keywords": ["🇺🇸|US|us|美国|美|United States"] }] ,"url": "http://www.gstatic.com/generate_204", "interval": "5m", "tolerance": 50},
     {"tag": "📲 Telegram", "type": "urltest", "outbounds": ["{all}"], "filter": [{ "action": "include", "keywords": ["🇺🇸|US|us|美国|美|United States|🇨🇦|加拿大"] } ],"url": "http://www.gstatic.com/generate_204", "interval": "5m", "tolerance": 50},
-    {"tag": "🎯 全球直连", "type": "direct" },
-    {"tag": "dns-out", "type": "dns" }
+
+    { "type": "direct","tag": "🎯 全球直连"},
+    { "type": "dns","tag": "dns-out"}
       ],
   
   "route": {
