@@ -31,7 +31,7 @@
       "rules": [
           { "rule_set": ["AdGuardSDNSFilter","AdGuardSDNSFilter-2","AdGuardSDNSFilter-3","chrome-doh"],"action": "reject","method": "default","no_drop": false},
           { "rule_set": ["geosite-cn","geoip-cn"],"server": "ALIDNS","disable_cache": true},
-          { "outbound": ["any"],"server": "adguadDNS"},
+          { "outbound": ["any"],"server": "ALIDNS"},
           { "query_type": ["A","AAAA"],"rewrite_ttl": 1,"server": "fakeip"},
           { "clash_mode": "global","server": "remote"},
           { "clash_mode": "direct","server": "local"}
