@@ -57,27 +57,6 @@
       {
           "domain_strategy": "prefer_ipv4",
           "listen": "0.0.0.0",
-          "listen_port": 2335,
-          "tag": "http-in",
-          "type": "http",
-          "users": []
-        },
-      {
-          "domain_strategy": "prefer_ipv4",
-          "type": "socks",
-          "tag": "socks-in",
-          "listen": "0.0.0.0",
-          "listen_port": 2333,
-          "users": [
-            {
-              "username": "admin",
-              "password": "12344321"
-            }
-          ]
-        },
-      {
-          "domain_strategy": "prefer_ipv4",
-          "listen": "0.0.0.0",
           "listen_port": 2334,
           "tag": "mixed-in",
           "type": "mixed",
