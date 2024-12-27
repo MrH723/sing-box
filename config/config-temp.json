@@ -138,6 +138,7 @@
       "rules": [
         { "type": "logical", "mode": "or", "rules": [{"port": 53}, {"protocol": "dns"}], "outbound": "dns-out"},
         { "outbound": "🎯 全球直连","rule_set": "ptdirectv1"},
+        { "rule_set": ["geosite-youtube"], "outbound": "📹 YouTube" },
         { "rule_set": ["geoip-google", "geosite-youtube","geosite-google"], "outbound": "♻️ 自动选择"},
         { "rule_set": ["geosite-chat","geosite-telegram","geoip-telegram"], "outbound": "📲 Telegram" },
         { "rule_set": ["geoip-netflix", "geosite-netflix"], "outbound": "🎥 Netflix"},
