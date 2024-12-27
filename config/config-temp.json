@@ -31,7 +31,7 @@
       "rules": [
           { "rule_set": ["AdGuardSDNSFilter","AdGuardSDNSFilter-2","AdGuardSDNSFilter-3","chrome-doh"],"action": "reject","method": "default","no_drop": false},
           { "rule_set": ["geosite-cn","geoip-cn"],"server": "ALIDNS","disable_cache": true},
-          { "outbound": ["any"],"server": "ALIDNS"},
+          { "outbound": ["any"],"server": "adguadDNS"},
           { "query_type": ["A","AAAA"],"rewrite_ttl": 1,"server": "fakeip"},
           { "clash_mode": "global","server": "remote"},
           { "clash_mode": "direct","server": "local"}
@@ -54,6 +54,27 @@
           "listen": "::",
           "listen_port": 5333
       },
+      {
+          "domain_strategy": "prefer_ipv4",
+          "listen": "0.0.0.0",
+          "listen_port": 2335,
+          "tag": "http-in",
+          "type": "http",
+          "users": []
+        },
+      {
+          "domain_strategy": "prefer_ipv4",
+          "type": "socks",
+          "tag": "socks-in",
+          "listen": "0.0.0.0",
+          "listen_port": 2333,
+          "users": [
+            {
+              "username": "admin",
+              "password": "12344321"
+            }
+          ]
+        },
       {
           "domain_strategy": "prefer_ipv4",
           "listen": "0.0.0.0",
@@ -80,7 +101,6 @@
     {"tag": "🇪🇺 欧洲自动", "type": "urltest", "outbounds": ["{all}"],  "filter": [{ "action": "include", "keywords": ["🇫🇷|🇮🇹|🇳🇱|🇪🇸|🇨🇭|🇬🇧|法国|意大利|西班牙|瑞士|英国|荷兰|德国|DE|GB"] }] ,"url": "http://www.gstatic.com/generate_204", "interval": "5m", "tolerance": 50},
     {"tag": "🎥 Netflix", "type": "urltest", "outbounds": ["{all}"], "filter": [{ "action": "include", "keywords": ["🇺🇸|US|us|美国|美|United States"] }] ,"url": "http://www.gstatic.com/generate_204", "interval": "5m", "tolerance": 50},
     {"tag": "📲 Telegram", "type": "urltest", "outbounds": ["{all}"], "filter": [{ "action": "include", "keywords": ["🇺🇸|US|us|美国|美|United States|🇨🇦|加拿大"] } ],"url": "http://www.gstatic.com/generate_204", "interval": "5m", "tolerance": 50},
-    {"tag": "📹 YouTube", "type": "urltest", "outbounds": ["{all}"], "filter": [{ "action": "include", "keywords": ["-MitCE-"] } ],"url": "http://www.gstatic.com/generate_204", "interval": "5m", "tolerance": 50}
 
     { "type": "direct","tag": "🎯 全球直连"},
     { "type": "dns","tag": "dns-out"}
@@ -90,7 +110,7 @@
       "auto_detect_interface": true,
       "rule_set": [
         { "tag": "geosite-chat", "type": "remote", "format": "binary", "url": "https://gh.wxzero.cn/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-ai-chat-!cn.srs", "download_detour": "🎯 全球直连" },
-        { "tag": "geosite-youtube", "type": "remote", "format": "binary", "url": "https://gh.wxzero.cn/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/youtube.srs", "download_detour": "🎯 全球直连" },
+        { "tag": "geosite-youtube", "type": "remote", "format": "binary", "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/youtube.srs", "download_detour": "🎯 全球直连" },
         { "tag": "geosite-google", "type": "remote", "format": "binary", "url": "https://gh.wxzero.cn/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/google.srs", "download_detour": "🎯 全球直连" },
         { "tag": "geosite-github", "type": "remote", "format": "binary", "url": "https://gh.wxzero.cn/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/github.srs", "download_detour": "🎯 全球直连" },
         { "tag": "geosite-telegram", "type": "remote", "format": "binary", "url": "https://gh.wxzero.cn/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/telegram.srs", "download_detour": "🎯 全球直连" },
@@ -117,7 +137,6 @@
       "rules": [
         { "type": "logical", "mode": "or", "rules": [{"port": 53}, {"protocol": "dns"}], "outbound": "dns-out"},
         { "outbound": "🎯 全球直连","rule_set": "ptdirectv1"},
-        { "rule_set": ["geosite-google"], "outbound": "📹 YouTube"},
         { "rule_set": ["geoip-google", "geosite-youtube","geosite-google"], "outbound": "♻️ 自动选择"},
         { "rule_set": ["geosite-chat","geosite-telegram","geoip-telegram"], "outbound": "📲 Telegram" },
         { "rule_set": ["geoip-netflix", "geosite-netflix"], "outbound": "🎥 Netflix"},
